@@ -1,0 +1,63 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background-color: lightgray;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* The carousel style */
+
+.carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+.carousel-indicators li {
+    border-color: #2d2d30;
+}
+
+.carousel-indicators li.active {
+        background-color: #2d2d30;
+    }
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+}
+
+/*Footer style*/
+
+footer {
+    background-color: #2d2d30;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer p {
+    color: gray;
+}
