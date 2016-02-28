@@ -178,6 +178,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\CurrensyExchenge.cs" />
     <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Loan.cs" />
@@ -245,10 +247,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Bank\Banks.cshtml" />
     <Content Include="Views\Product\Deposits.cshtml" />
     <Content Include="Views\Product\Loans.cshtml" />
     <Content Include="Views\Product\Currency.cshtml" />
+    <Content Include="Views\Bank\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

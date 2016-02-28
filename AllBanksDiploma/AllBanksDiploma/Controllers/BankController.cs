@@ -8,7 +8,7 @@ namespace AllBanksDiploma.Controllers
     {
                 
         // GET: Product
-        public ActionResult Banks()
+        public ActionResult List()
         {
             List<Bank> allBanks = new List<Bank>
             {

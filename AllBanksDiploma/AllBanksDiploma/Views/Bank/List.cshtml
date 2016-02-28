@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "БАНКИ";
+}
+
+
+<div class="title" align="center">
+    <h1>
+        <b>Информация о банках Беларуси</b>
+    </h1>
+</div>
+<hr />
+<div class="container">
+    <table class="table">
+        <thead style="font-size: 16pt">
+            <tr>
+                <th></th>
+                <th style="text-align:center">Наименование Банка</th>
+                <th style="vertical-align: top; text-align: center">Описание</th>
+                <th style="text-align:center">Официальный сайт</th>
+            </tr>
+        </thead>
+        <tbody style="font-size: 13pt">
+            @foreach (var b in ViewBag.Banks)
+            {
+                <tr>
+                    <td>@b.ImageData</td>
+                    <td>@b.BankName</td>
+                    <td>@b.Description</td>
+                    <td align="center">@b.WebPage</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
