@@ -6,20 +6,19 @@ using System.Web.Mvc;
 
 namespace AllBanksDiploma.Controllers
 {
-    public class ContentController : Controller
+    public class ProductController : Controller
     {
-        public ActionResult Banks()
-        {
-            return View();
-        }
+        // GET: Product
         public ActionResult Deposits()
         {
             return View();
         }
+
         public ActionResult Loans()
         {
             return View();
         }
+
         public ActionResult Currency()
         {
             return View();
