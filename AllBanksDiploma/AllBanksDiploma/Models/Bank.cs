@@ -16,6 +16,6 @@ namespace AllBanksDiploma.Models
         public virtual ICollection<Branch> Branches { get; set; }
         public virtual ICollection<Deposit> Deposits { get; set; }
         public virtual ICollection<Loan> Loans { get; set; }
-        public virtual ICollection<ExchengeRate> ExchangeRate { get; set; }
+        public virtual ICollection<ExchangeRate> ExchangeRate { get; set; }
     }
 }

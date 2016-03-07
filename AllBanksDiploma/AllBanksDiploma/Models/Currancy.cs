@@ -5,11 +5,13 @@ using System.Web;
 
 namespace AllBanksDiploma.Models
 {
-    public class Currency
+    public class Currancy
     {
         public int CurrencyId { get; set; }
+        public int CurrencyCode { get; set; }
         public string CurrencyMnemonic { get; set; }
         public string CurrencyName { get; set; }
-        public virtual ExchengeRate ExchangeRate { get; set; }
+        public virtual Deposit Deposit { get; set; }
+        public virtual ExchangeRate ExchangeRate { get; set; }
     }
 }

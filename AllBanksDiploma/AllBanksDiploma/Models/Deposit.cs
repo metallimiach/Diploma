@@ -13,6 +13,7 @@ namespace AllBanksDiploma.Models
         public string TermType { get; set; }
         public int Term { get; set; }
         public double DepositRate { get; set; }
+        public virtual Currancy Currancy { get; set; }
         public virtual Bank Bank { get; set; }
     }
 }
