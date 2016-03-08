@@ -66,4 +66,3 @@ D:\_Diploma\AllBanksDiploma\AllBanksDiploma\bin\Microsoft.Owin.Security.Twitter.
 D:\_Diploma\AllBanksDiploma\AllBanksDiploma\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\_Diploma\AllBanksDiploma\AllBanksDiploma\obj\Debug\AllBanksDiploma.dll
 D:\_Diploma\AllBanksDiploma\AllBanksDiploma\obj\Debug\AllBanksDiploma.pdb
-D:\_Diploma\AllBanksDiploma\AllBanksDiploma\obj\Debug\AllBanksDiploma.csprojResolveAssemblyReference.cache

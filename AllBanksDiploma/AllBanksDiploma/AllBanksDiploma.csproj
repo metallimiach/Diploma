@@ -177,8 +177,10 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BankContext.cs" />
+    <Compile Include="Models\BankDbInitializer.cs" />
     <Compile Include="Models\Branch.cs" />
-    <Compile Include="Models\Currancy.cs" />
+    <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
