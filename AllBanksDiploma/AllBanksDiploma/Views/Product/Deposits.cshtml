@@ -1,8 +1,14 @@
-﻿
-@{
-    ViewBag.Title = "Deposits";
+﻿@{
+    ViewBag.Title = "Вклады(Депозиты)";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Deposits</h2>
-
+<div class="title" align="center">
+    <h1><b>Вклады в белорусских рублях и иностранной валюте</b></h1>
+</div>
+<div class="container">
+    @Html.Partial("CalcDepositIncomePartial")
+</div>
+<div class="table-responsive">
+    @Html.Partial("DepositsPartial")
+</div>

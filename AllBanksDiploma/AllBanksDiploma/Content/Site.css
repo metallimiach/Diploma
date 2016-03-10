@@ -1,8 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 0px;
-    background-color: lightgray;
-    background: linear-gradient(to right, gray, lightgray);
+    background-color: whitesmoke; 
+    background: linear-gradient(to bottom, lightgray, whitesmoke);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -56,6 +56,7 @@ textarea {
 footer {
     background-color: #2d2d30;
     padding-top: 20px;
+    font-size: 14px;
     padding-bottom: 10px;
 }
 

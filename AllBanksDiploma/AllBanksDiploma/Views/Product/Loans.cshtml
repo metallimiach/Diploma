@@ -1,8 +1,15 @@
-﻿
-@{
-    ViewBag.Title = "Loans";
+﻿@{
+    ViewBag.Title = "Кредиты";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Loans</h2>
-
+<div class="title" align="center">
+    <h1><b>Кредиты для частных лиц</b></h1>
+</div>
+<div class="container">
+    @Html.Partial("CalcLoanPaymentsPartial")
+</div>
+<hr />
+<div class="table-responsive">
+    @Html.Partial("LoansPartial")
+</div>

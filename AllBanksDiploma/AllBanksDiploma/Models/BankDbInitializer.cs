@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace AllBanksDiploma.Models
 {
-    public class BankDbInitializer : DropCreateDatabaseAlways<BankContext>
+    public class BankDbInitializer : DropCreateDatabaseIfModelChanges<BankContext>
     {
         protected override void Seed(BankContext db)
         {

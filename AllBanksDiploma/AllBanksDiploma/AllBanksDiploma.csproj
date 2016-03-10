@@ -181,6 +181,7 @@
     <Compile Include="Models\BankDbInitializer.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\CurrencyEx.cs" />
     <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -203,7 +204,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ClassDiagram2.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -252,8 +252,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Product\Deposits.cshtml" />
     <Content Include="Views\Product\Loans.cshtml" />
-    <Content Include="Views\Product\Currency.cshtml" />
+    <Content Include="Views\Product\CurrencyExchange.cshtml" />
     <Content Include="Views\Bank\List.cshtml" />
+    <Content Include="Views\Shared\CalcDepositIncomePartial.cshtml" />
+    <Content Include="Views\Shared\DepositsPartial.cshtml" />
+    <Content Include="Views\Shared\CalcLoanPaymentsPartial.cshtml" />
+    <Content Include="Views\Shared\LoansPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Currency";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title" align="center">
+    <h1><b>Курсы обмена валют</b></h1>
+</div>
+<hr />
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead style="font-size: 14pt">
+            <tr>
+                <th rowspan="2" , style="text-align:center">Банки</th>
+                <th colspan="2" , style="text-align:center">USD</th>
+                <th colspan="2" , style="text-align:center">EUR</th>
+                <th colspan="2" , style="text-align:center">RUB</th>
+            </tr>
+            <tr>
+                <th>Банк покупает</th>
+                <th>Банк продает</th>
+                <th>Банк покупает</th>
+                <th>Банк продает</th>
+                <th>Банк покупает</th>
+                <th>Банк продает</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var i in ViewBag.CurrencyExchange)
+            {
+                <tr>
+                    <td>@i.Bank</td>
+                    <td>@i.BuyUSD</td>
+                    <td>@i.SellUSD</td>
+                    <td>@i.BuyEUR</td>
+                    <td>@i.SellEUR</td>
+                    <td>@i.BuyRUB</td>
+                    <td>@i.SellRUB</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

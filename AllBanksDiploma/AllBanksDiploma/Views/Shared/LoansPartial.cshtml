@@ -1,0 +1,27 @@
+﻿<table class="table table-hover">
+    <thead style="font-size: 14pt">
+        <tr>
+            <th>Банк/<p>Название кредита</p></th>
+            <th>Срок</th>
+            <th>Процентная ставка</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in ViewBag.Loans)
+        {
+            <tr>
+                <td><b>@i.Bank.BankName/</b><p>"@i.LoanName"</p></td>
+                @if (i.TermType == "m")
+                {
+                    <td>@i.Term мес.</td>
+                }
+                else if (i.TermType == "d")
+                {
+                    <td>@i.Term дн.</td>
+                }
+
+                <td>@i.LoanRate %</td>
+            </tr>
+        }
+    </tbody>    
+</table>

@@ -1,0 +1,45 @@
+﻿<table class="table table-hover">
+    <thead style="font-size: 14pt">
+        <tr>
+            <th>Банк/<p>Название вклада</p></th>
+            <th>Валюта</th>
+            <th>Срок</th>
+            <th>Процентная ставка</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in ViewBag.Deposits)
+            {
+            <tr>
+                <td><b>@i.Bank.BankName/</b><p>"@i.DepositName"</p></td>
+                @if (i.CurrCode == 974)
+                {
+                    <td>Белорусские рубли</td>
+                }
+                else if (i.CurrCode == 840)
+                {
+                    <td>Доллары США</td>
+                }
+                else if (i.CurrCode == 978)
+                {
+                    <td>Евро</td>
+                }
+                else if (i.CurrCode == 643)
+                {
+                    <td>Российские рубли</td>
+                }
+
+                @if (i.TermType == "m")
+                {
+                    <td>@i.Term мес.</td>
+                }
+                else if (i.TermType == "d")
+                {
+                    <td>@i.Term дн.</td>
+                }
+
+                <td>@i.DepositRate %</td>
+            </tr>
+        }
+    </tbody>
+</table>

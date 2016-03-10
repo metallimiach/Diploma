@@ -24,7 +24,7 @@
                     <li>@Html.ActionLink("Банки", "List", "Bank")</li>
                     <li>@Html.ActionLink("Вклады", "Deposits", "Product")</li>
                     <li>@Html.ActionLink("Кредиты", "Loans", "Product")</li>
-                    <li>@Html.ActionLink("Курсы валют", "Currency", "Product")</li>
+                    <li>@Html.ActionLink("Курсы валют", "CurrencyExchange", "Product")</li>
                     <li>@Html.ActionLink("О проекте", "About", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -34,17 +34,16 @@
     <div class="container body-content">
         @RenderBody()
     </div>
-        <hr />
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <p>&copy;@DateTime.Now.Year- Личный Банкир</p>
-                    </div>
-                    <div class="col-md-8"></div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>&copy;@DateTime.Now.Year-Личный Банкир</p>
                 </div>
+                <div class="col-md-8"></div>
             </div>
-        </footer>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

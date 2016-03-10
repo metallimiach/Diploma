@@ -1,33 +1,31 @@
 ﻿
 @{
-    ViewBag.Title = "БАНКИ";
+    ViewBag.Title = "Банки";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 <div class="title" align="center">
-    <h1>
-        <b>Информация о банках Беларуси</b>
-    </h1>
+    <h1><b>Информация о банках Беларуси</b></h1>
 </div>
-<hr />
-<div class="container">
-    <table class="table">
-        <thead style="font-size: 16pt">
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead style="font-size: 14pt">
             <tr>
                 <th></th>
-                <th style="text-align:center">Наименование Банка</th>
-                <th style="vertical-align: top; text-align: center">Описание</th>
-                <th style="text-align:center">Официальный сайт</th>
+                <th>Наименование Банка</th>
+                <th>Описание</th>
+                <th>Официальный сайт</th>
             </tr>
         </thead>
-        <tbody style="font-size: 13pt">
+        <tbody>
             @foreach (var b in ViewBag.Banks)
             {
                 <tr>
                     <td>@b.ImageData</td>
                     <td>@b.BankName</td>
-                    <td>@b.Description<p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
-                    <td align="center">@b.WebPage</td>
+                    <td>@b.Description<a href="/Bank/Details/@b.BankId"> Подробнее...</a></td>
+                    <td align="center"><a href="@b.WebPage">@b.WebPage</a></td>
                 </tr>
             }
         </tbody>
