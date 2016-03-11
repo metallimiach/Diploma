@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Подробно о банке";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1><b>@ViewBag.Bank</b></h1>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        @*<thead style="font-size: 14pt">
+            <tr>
+                <th>Наименование подразделения</th>
+                <th>Адрес</th>
+                <th>Телефон</th>
+            </tr>
+        </thead>*@
+        <tbody>
+            @foreach (var i in ViewBag.Branches)
+            {
+                <tr>
+                    <td>@i.BranchName</td>
+                    <td>@i.City, @i.Street, дом @i.Building</td>
+                    <td>@i.Phone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

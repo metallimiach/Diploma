@@ -1,4 +1,5 @@
-﻿
+﻿@using AllBanksDiploma.Models
+@model IEnumerable<Bank>
 @{
     ViewBag.Title = "Банки";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var b in ViewBag.Banks)
+            @foreach (Bank b in Model)
             {
                 <tr>
                     <td>@b.ImageData</td>

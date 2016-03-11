@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AllBanksDiploma.Models.DepositIncome>
+
+@{
+    ViewBag.Title = "Доход по вкладу";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="title" align="center">
+    <h1><b>Вклады в белорусских рублях и иностранной валюте</b></h1>
+</div>
+<div class="container">
+    @Html.Partial("CalcDepositIncomePartial")
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead style="font-size: 13pt">
+            <tr>
+                <th>Банк</th>
+                <th>Название вклада</th>
+                <th>Срок</th>
+                <th>Ставка</th>
+                <th>Сумма вклада</th>
+                <th>Доход</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.BankName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DepositName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Term)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Rate)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Sum)</td>
+                    <td style="font-size: 13pt">@Html.DisplayFor(modelItem => item.Income)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

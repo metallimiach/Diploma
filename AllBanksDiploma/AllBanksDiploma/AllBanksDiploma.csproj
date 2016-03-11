@@ -182,10 +182,14 @@
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\CurrencyEx.cs" />
+    <Compile Include="Models\DepositConditions.cs" />
+    <Compile Include="Models\DepositIncome.cs" />
     <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\Deposit.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\LoanCondition.cs" />
+    <Compile Include="Models\LoanPayments.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -253,11 +257,14 @@
     <Content Include="Views\Product\Deposits.cshtml" />
     <Content Include="Views\Product\Loans.cshtml" />
     <Content Include="Views\Product\CurrencyExchange.cshtml" />
-    <Content Include="Views\Bank\List.cshtml" />
     <Content Include="Views\Shared\CalcDepositIncomePartial.cshtml" />
     <Content Include="Views\Shared\DepositsPartial.cshtml" />
     <Content Include="Views\Shared\CalcLoanPaymentsPartial.cshtml" />
     <Content Include="Views\Shared\LoansPartial.cshtml" />
+    <Content Include="Views\Bank\Details.cshtml" />
+    <Content Include="Views\Product\CalcDepositIncome.cshtml" />
+    <Content Include="Views\Bank\List.cshtml" />
+    <Content Include="Views\Product\CalcLoanPayments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
