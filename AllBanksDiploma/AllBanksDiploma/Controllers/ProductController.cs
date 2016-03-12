@@ -113,5 +113,10 @@ namespace AllBanksDiploma.Controllers
             }
             return income=(decimal)(deposit-(double)sum);
         }
+
+        private decimal CalcLoanPayments (decimal sum, int term, double rate)
+        {
+            return sum;
+        }
     }
 }
