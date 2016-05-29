@@ -5,29 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>CalcLoanPayments</h2>
+<h2>Расчет платежей по кредиту</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Debt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Interest)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Total)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Balance)
-        </th>
-        <th></th>
+        <th>Месяц</th>
+        <th>Погашение основного долга</th>
+        <th>Погашение процентов</th>
+        <th>Всего оплата за месяц</th>
+        <th>Остаток основного долга</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -47,12 +33,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Balance)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
     </tr>
-}
-
+    }
 </table>
+<div>Сумма переплаты: @ViewBag.OverPayment</div>

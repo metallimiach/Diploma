@@ -13,7 +13,7 @@
 </div>
 <div class="table-responsive">
     <table class="table table-hover">
-        <thead style="font-size: 13pt">
+        <thead>
             <tr>
                 <th>Банк</th>
                 <th>Название вклада</th>
@@ -26,13 +26,13 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr align="center">
                     <td>@Html.DisplayFor(modelItem => item.BankName)</td>
                     <td>@Html.DisplayFor(modelItem => item.DepositName)</td>
                     <td>@Html.DisplayFor(modelItem => item.Term)</td>
                     <td>@Html.DisplayFor(modelItem => item.Rate)</td>
                     <td>@Html.DisplayFor(modelItem => item.Sum)</td>
-                    <td style="font-size: 13pt">@Html.DisplayFor(modelItem => item.Income)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Income)</td>
                 </tr>
             }
         </tbody>

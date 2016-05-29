@@ -86,19 +86,24 @@ namespace AllBanksDiploma.Controllers
         {
             List<LoanPayments> Result = new List<LoanPayments>();
             decimal sum = condition.Sum;
-            for (int i = 1; i < condition.Term + 1; i++)
+            decimal tmpsum = 0;
+            decimal totalPayment = 0;
+            for (int i = 0; i < condition.Term; i++)
             {
                 LoanPayments payment = new LoanPayments();
                 var date = DateTime.Today;
-                date = date.AddMonths(i);
-                payment.Date = string.Format("{0}-{1}", date.Month, date.Year);
-                payment.Debt = 100;
-                payment.Interest = 10;
+                date = date.AddMonths(i+1);
+                payment.Date = date.ToString("MMM-yyyy");
+                payment.Debt = (sum - tmpsum) / (condition.Term - i);
+                payment.Interest = (sum - tmpsum) /100 * (decimal)condition.Rate/condition.Term;
                 payment.Total = payment.Debt + payment.Interest;
-                payment.Balance = 200;
+                tmpsum += payment.Debt;
+                payment.Balance = sum - tmpsum;
+                totalPayment += payment.Total;
                 Result.Add(payment);
 
             }
+            ViewBag.OverPayment = totalPayment - sum;
             return View(Result);
         }
 
@@ -112,11 +117,6 @@ namespace AllBanksDiploma.Controllers
                 deposit *= q;
             }
             return income=(decimal)(deposit-(double)sum);
-        }
-
-        private decimal CalcLoanPayments (decimal sum, int term, double rate)
-        {
-            return sum;
         }
     }
 }

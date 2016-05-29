@@ -11,8 +11,8 @@
 </div>
 <div class="table-responsive">
     <table class="table table-hover">
-        <thead style="font-size: 14pt">
-            <tr>
+        <thead>
+            <tr align="center">
                 <th></th>
                 <th>Наименование Банка</th>
                 <th>Описание</th>
@@ -26,7 +26,7 @@
                     <td>@b.ImageData</td>
                     <td>@b.BankName</td>
                     <td>@b.Description<a href="/Bank/Details/@b.BankId"> Подробнее...</a></td>
-                    <td align="center"><a href="@b.WebPage">@b.WebPage</a></td>
+                    <td align="center"><a href="http://@b.WebPage">@b.WebPage</a></td>
                 </tr>
             }
         </tbody>
